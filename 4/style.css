@@ -1,0 +1,67 @@
+#root {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 682px;
+    height: 300px;
+    font-size: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+.phone-form {
+    text-align: left;
+    font-size: 14px;
+    display: inline-block;
+    width: 321px;
+    margin: 10px;
+    vertical-align: top;
+}
+.phone-form_title {
+    color: cornflowerblue;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 0 5px;
+}
+.phone-form_sub-title {
+    font-weight: 700;
+}
+.phone-form > fieldset {
+    height: 328px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+.phone-form > fieldset > div {
+    margin: 10px 15px;
+}
+.phone-form_label {
+    display: block;
+    margin-top: 20px;
+}
+.phone-form_label span {
+    margin-left: 10px;
+}
+.phone-form_label_input {
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 100%;
+    display: block;
+    line-height: 21px;
+    border-radius: 3px;
+    height: 31px;
+    border: 2px solid cornflowerblue;
+    padding-left: 5px;
+}
+.phone-form_info {
+    font-size: 12px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.phone-form_submit {
+    box-sizing: border-box;
+    height: 31px;
+    padding: 0 25px;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+}
