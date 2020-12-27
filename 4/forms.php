@@ -1,5 +1,6 @@
 <?php
 
+
 if(!empty($_GET['action'])) {
 
     //Mysqli instead of PDO, because PDO on my local machine(5.9.11-3-MANJARO x86_64, Apache/2.4.46, PHP Version 7.2.33) is not initially enabled
@@ -34,7 +35,7 @@ if(!empty($_GET['action'])) {
 
     class Handler {
         function add() {
-            if($this->validateEmail($_POST['email'])) {
+            if(!empty($_POST['email']) && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
                 $email = $_POST['email'];
                 $hashEmail = password_hash($email, PASSWORD_DEFAULT);
 
@@ -46,7 +47,7 @@ if(!empty($_GET['action'])) {
             }
         }
         function retrieve() {
-            if($this->validateEmail($_POST['email'])) {
+            if(!empty($_POST['email']) && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
                 $email = $_POST['email'];
 
                 //Get phone numbers
@@ -71,9 +72,6 @@ if(!empty($_GET['action'])) {
                     'X-Mailer: PHP/' . phpversion();
                 mail($to, $subject, $message, $headers);
             }
-        }
-        protected function validateEmail($email) {
-            return !empty($email) && filter_var($email,FILTER_VALIDATE_EMAIL);
         }
     }
 
