@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 0;
+            margin: 10px;
+        }
+        div {
+            border: 1px solid black;
+            height: 100px;
+            box-sizing: border-box;
+            font-size: 0;
+            margin: 20px 10px;
+        }
+        .a, .b {
+            width: calc(50% - 20px);
+            display: inline-block;
+            height: 150px;
+            vertical-align: bottom; /*just in case*/
+        }
+        .b {
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div></div>
+</body>
+</html>

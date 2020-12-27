@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <form action="forms.php?action=add" method="POST" class="phone-form">
+            <fieldset>
+                <legend class="phone-form_title">Add your phone number</legend>
+                <div>
+                    <legend class="phone-form_sub-title">Option 1. Add your phone <br> number</legend>
+                    <label class="phone-form_label">
+                        <span>Enter your PHONE:</span>
+                        <input name="phone" type="text" class="phone-form_label_input">
+                    </label>
+                    <label class="phone-form_label">
+                        <span>Enter your e-mail *:</span>
+                        <input name="email" type="email" class="phone-form_label_input" required>
+                    </label>
+                    <p class="phone-form_info">
+                        You will be able to retrieve your phone number later on using your e-mail.
+                    </p>
+                    <input type="submit" value="Submit" class="phone-form_submit">
+                </div>
+            </fieldset>
+        </form>
+        <form action="forms.php?action=retrieve" method="POST" class="phone-form">
+            <fieldset>
+                <legend class="phone-form_title">Retrieve your phone number</legend>
+                <div>
+                    <legend class="phone-form_sub-title">Option 2. Retrieve your phone number</legend>
+                    <label class="phone-form_label">
+                        <span>Enter your e-mail *:</span>
+                        <input name="email" type="email" class="phone-form_label_input" required>
+                    </label>
+                    <p class="phone-form_info">
+                        The phone number will be e-mailed <br>to you.
+                    </p>
+                    <input type="submit" value="Submit" class="phone-form_submit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
